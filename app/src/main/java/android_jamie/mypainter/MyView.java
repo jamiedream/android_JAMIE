@@ -49,12 +49,12 @@ public class MyView extends View {
     private class MyGDListener extends GestureDetector.SimpleOnGestureListener{
         @Override
         public boolean onDown(MotionEvent e) {
-            Log.d("jamie", "onDown");
+//            Log.d("jamie", "onDown");
             return true; //super.onDown(e);
         }
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            Log.d("jamie", "onFling:" + velocityX + "x" + velocityY);
+//            Log.d("jamie", "onFling:" + velocityX + "x" + velocityY);
             return super.onFling(e1, e2, velocityX, velocityY);
         }
 
@@ -165,8 +165,9 @@ public class MyView extends View {
         lines.getLast().add(point);
         invalidate();
     }
-//    void clear(){
-//        lines.remove();
-//        invalidate();
-//    }
+
+    public void doClear(){
+        lines.clear();
+        invalidate();
+    }
 }
